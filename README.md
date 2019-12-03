@@ -4,7 +4,13 @@ This is a docker container that runs a modified version of fiche in a container,
 ```bash
 ps auwwx | nc container-ip 59999
 ```
+
 Will return a url like http://docker-host:10080/g89sfs.
+
+## How to run container
+```bash
+docker run -itd --rm -p 10.2.0.3:10080:80 -p 10.2.0.3:59999:9999 --name pv pipe-viewer && docker ps
+```
 ## Network Ports
 | Fiche Port | Docker Exposed Port |
 | ---------- | ------------------- |
