@@ -1,0 +1,3 @@
+#!/bin/bash
+service nginx start
+fiche -d 10.2.0.3:10080 -o /var/www/html -s 6 -B 15360 
