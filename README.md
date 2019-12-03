@@ -12,3 +12,7 @@ Will return a url like http://docker-host:10080/g89sfs.
 | 80/tcp     | 10080/tcp           |
 
 These can be modified in the Dockerfile, the line where it echos the fiche command to the run_nginx.sh file.
+
+## A WARNING
+This application has a large buffer for input via NC. This means it can be easily attacked if the server is publically facing.
+Another note on nc or netcat: this is a tool that can be easily abused; if this tool is installed on a machine, please take extra care to have it secured from unauthorized access. It is my suggestion to make this docker container airgapped, and especially, not be run on a host that is in a privileged network.
