@@ -9,13 +9,13 @@ Will return a url like http://docker-host:10080/g89sfs.
 
 ## How to run container
 ```bash
-docker run -itd --rm -p 10.2.0.3:10080:80 -p 10.2.0.3:59999:9999 --name pv pipe-viewer && docker ps
+docker run -itd --rm -p 10.2.0.3:80:80 -p 10.2.0.3:59999:9999 --name pv pipe-viewer && docker ps
 ```
 ## Network Ports
-| Fiche Port | Docker Exposed Port |
+| Fiche Port | Docker Exposed Port |  
 | ---------- | ------------------- |
-| 9999/tcp   | 59999/tcp           |
-| 80/tcp     | 10080/tcp           |
+| 9999/tcp   | 59999/tcp           | 
+| 80/tcp     | 80/tcp              | 
 
 These can be modified in the Dockerfile, the line where it echos the fiche command to the run_nginx.sh file.
 
